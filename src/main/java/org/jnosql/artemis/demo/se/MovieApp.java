@@ -24,14 +24,13 @@ public class MovieApp {
 
     public static void main(String[] args) {
 
-        try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            final MoviePublisherService service = container.select(MoviePublisherService.class).get();
-            service.sendMessage(new Movie("The Big Flame", "Drama"));
-            service.sendMessage(new Movie("Beautiful People", "Comedy"));
-            service.sendMessage(new Movie("Barking Dogs Never Bite (Flandersui gae)", "Comedy|Horror"));
-            service.sendMessage(new Movie("Snow Creature, The", "Horror"));
-            service.sendMessage(new Movie("Osama", "Drama"));
-        }
+        SeContainer container = SeContainerInitializer.newInstance().initialize();
+        final MoviePublisherService service = container.select(MoviePublisherService.class).get();
+        service.sendMessage(new Movie("The Big Flame", "Drama"));
+        service.sendMessage(new Movie("Beautiful People", "Comedy"));
+        service.sendMessage(new Movie("Barking Dogs Never Bite (Flandersui gae)", "Comedy|Horror"));
+        service.sendMessage(new Movie("Snow Creature, The", "Horror"));
+        service.sendMessage(new Movie("Osama", "Drama"));
 
     }
 

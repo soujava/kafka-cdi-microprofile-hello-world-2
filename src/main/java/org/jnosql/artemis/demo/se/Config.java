@@ -14,4 +14,6 @@ public class Config {
     static final String TOPIC_TEXT = "text";
 
     static final String GROUP_ID_TEXT = "text_group";
+
+    static final String GROUP_ID_TEXT_2 = "text_group_2";
 }

@@ -25,11 +25,10 @@ public class TextApp {
 
     public static void main(String[] args) {
 
-        try (SeContainer container = SeContainerInitializer.newInstance().initialize()) {
-            final TextPublisherService service = container.select(TextPublisherService.class).get();
-            for (int index = 0; index < 100; index++) {
-                service.sendMessage(UUID.randomUUID().toString());
-            }
+        SeContainer container = SeContainerInitializer.newInstance().initialize();
+        final TextPublisherService service = container.select(TextPublisherService.class).get();
+        for (int index = 0; index < 10; index++) {
+            service.sendMessage(UUID.randomUUID().toString());
         }
 
     }

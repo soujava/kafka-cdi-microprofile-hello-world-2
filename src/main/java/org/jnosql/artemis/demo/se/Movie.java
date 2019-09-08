@@ -2,8 +2,6 @@ package org.jnosql.artemis.demo.se;
 
 public class Movie {
 
-    private String id;
-
     private String title;
 
     private String genre;
@@ -20,8 +18,7 @@ public class Movie {
     @Override
     public String toString() {
         return "Movie{" +
-                "id='" + id + '\'' +
-                ", title='" + title + '\'' +
+                "title='" + title + '\'' +
                 ", genre='" + genre + '\'' +
                 '}';
     }
