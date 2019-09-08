@@ -3,6 +3,7 @@ package org.jnosql.artemis.demo.se;
 
 import org.aerogear.kafka.cdi.annotation.KafkaConfig;
 
+//@KafkaConfig(bootstrapServers = "localhost:9092")
 @KafkaConfig(bootstrapServers = "#{kafka_host}:#{kafka_port}")
 public class Config {
 
